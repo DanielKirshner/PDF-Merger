@@ -1,9 +1,8 @@
+from rich import print
 from PyPDF2 import PdfMerger
-import merge_logic
-import traceback
 
-# PDF_PATHS: list[str] = [".//tests//first.pdf", ".//tests//second.pdf", ".//tests//third.pdf"]
-# OUTPUT_PDF_PATH: str = ".//tests//merged.pdf"
+import merge_logic
+
 
 def main():
     merge_logic.run_logic()
@@ -12,5 +11,7 @@ def main():
 if __name__ == "__main__":
     try:
         main()
+    except KeyboardInterrupt:
+        print("[bold red]Stopped.")
     except Exception as unhandled_exception:
-        print("Unhandled exception caught.")
+        print("[bold red]Unhandled exception caught.")
