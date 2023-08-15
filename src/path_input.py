@@ -1,4 +1,3 @@
-
 @staticmethod
 def get_path_from_user() -> str:
     path = ''
@@ -15,6 +14,7 @@ def get_path_from_user() -> str:
     
     return path
 
+
 @staticmethod
 def get_list_of_paths_from_user(num_of_paths: int) -> list[str]:
     paths = []
@@ -22,6 +22,3 @@ def get_list_of_paths_from_user(num_of_paths: int) -> list[str]:
         paths.append(get_path_from_user())
     
     return paths
-
-paths_list = get_list_of_paths_from_user(3)
-print(paths_list)
