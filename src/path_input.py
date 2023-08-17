@@ -1,7 +1,9 @@
 from rich import print
 
+import file_utils
+
 @staticmethod
-def get_path_from_user() -> str:
+def get_path_from_user(file_should_exists: bool) -> str:
     path = ''
     path_valid = False
     
@@ -11,9 +13,25 @@ def get_path_from_user() -> str:
         
         if not isinstance(path, str) or len(path) == 0:
             print("[bold red]Invalid path given.")
+            continue
         else:
             path_valid = True
-    
+            
+        if file_should_exists:
+            if not file_utils.is_exists(path):
+                print(f"[bold red]File {path} does not exists.")
+                path_valid = False
+                continue
+            else:
+                path_valid = True
+            
+            if not file_utils.is_file_pdf(path):
+                print(f"[bold red]File {path} is not a PDF")
+                path_valid = False
+                continue
+            else:
+                path_valid = True
+                
     return path
 
 
@@ -24,7 +42,8 @@ def get_list_of_paths_from_user() -> list[str]:
     
     paths = []
     for i in range(num_of_paths):
-        paths.append(get_path_from_user())
+        PDF_FILE_SHOULD_EXISTS = True
+        paths.append(get_path_from_user(PDF_FILE_SHOULD_EXISTS))
     
     return paths
 
