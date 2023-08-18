@@ -4,12 +4,16 @@ from path_input import *
 from path_utils import combine_full_path
 
 
+OUTPUT_DIRECTORY_NAME = "out"
+
+
 @staticmethod
 def run_logic() -> None:
     pdf_paths = get_list_of_paths_from_user()
     print("[cyan]Enter output pdf file name:")
     OUTPUT_FILE_SHOULD_EXISTS = False
-    full_output_merged_pdf_path = combine_full_path(get_path_from_user(OUTPUT_FILE_SHOULD_EXISTS))
+    output_path_from_user = get_path_from_user(OUTPUT_FILE_SHOULD_EXISTS)
+    full_output_merged_pdf_path = combine_full_path(OUTPUT_DIRECTORY_NAME, output_path_from_user)
     PDF_MERGER_THROW_EXCEPTIONS = False
     merger = PdfMerger(strict=PDF_MERGER_THROW_EXCEPTIONS)
     
