@@ -1,7 +1,8 @@
 import os
 
+
 @staticmethod
-def is_exists(file_path: str) -> bool:
+def is_file(file_path: str) -> bool:
     return os.path.isfile(file_path)
 
 
