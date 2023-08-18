@@ -18,7 +18,7 @@ def get_path_from_user(file_should_exists: bool) -> str:
             path_valid = True
             
         if file_should_exists:
-            if not file_utils.is_exists(path):
+            if not file_utils.is_file(path):
                 print(f"[bold red]File {path} does not exists.")
                 path_valid = False
                 continue
