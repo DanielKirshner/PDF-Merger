@@ -1,11 +1,12 @@
-from rich import print
+from pretty_errors_handle import PrettyErrorsHandle
 from PyPDF2 import PdfMerger
-import pretty_errors
+from rich import print
 
 import merge_logic
 
 
 def main():
+    p_errors_handle = PrettyErrorsHandle()
     merge_logic.run_logic()
 
 
