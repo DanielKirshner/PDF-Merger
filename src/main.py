@@ -1,5 +1,6 @@
 from rich import print
 from PyPDF2 import PdfMerger
+import pretty_errors
 
 import merge_logic
 
