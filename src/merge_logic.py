@@ -28,4 +28,4 @@ def run_logic() -> None:
     merger.write(full_output_merged_pdf_path)
     print(f"[green]All files merged into {full_output_merged_pdf_path}")
     
-    merger.close()
+    merger.close() # TODO: wrap with RAII merger handle object with __enter__ and __exit__
