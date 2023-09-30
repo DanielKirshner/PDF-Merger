@@ -6,7 +6,7 @@ import merge_logic
 
 
 def main():
-    p_errors_handle = PrettyErrorsHandle()
+    PrettyErrorsHandle()
     merge_logic.run_logic()
 
 
