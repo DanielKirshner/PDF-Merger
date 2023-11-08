@@ -1,4 +1,5 @@
 from pretty_errors_handle import PrettyErrorsHandle
+from rich import print
 import merge_logic
 
 
