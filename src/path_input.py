@@ -1,6 +1,6 @@
 from rich import print
-
 import file_utils
+
 
 @staticmethod
 def get_path_from_user(file_should_exists: bool) -> str:
