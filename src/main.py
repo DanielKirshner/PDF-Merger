@@ -1,12 +1,10 @@
 from pretty_errors_handle import PrettyErrorsHandle
-from PyPDF2 import PdfMerger
 from rich import print
-
 import merge_logic
 
 
 def main():
-    p_errors_handle = PrettyErrorsHandle()
+    PrettyErrorsHandle()
     merge_logic.run_logic()
 
 
@@ -15,5 +13,7 @@ if __name__ == "__main__":
         main()
     except KeyboardInterrupt:
         print("[bold red]Stopped.")
-    except Exception as unhandled_exception:
+    except IOError:
+        print("[bold red]Input/Output exception caught.")
+    except Exception:
         print("[bold red]Unhandled exception caught.")

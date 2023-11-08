@@ -1,6 +1,6 @@
 from rich import print
-
 import file_utils
+
 
 @staticmethod
 def get_path_from_user(file_should_exists: bool) -> str:
@@ -8,7 +8,7 @@ def get_path_from_user(file_should_exists: bool) -> str:
     path_valid = False
     
     while not path_valid:
-        print("[cyan]Enter path -> ")
+        print("[cyan]Enter -> ")
         path = str(input())
         
         if not isinstance(path, str) or len(path) == 0:

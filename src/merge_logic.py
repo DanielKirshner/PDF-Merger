@@ -14,7 +14,7 @@ def run_logic() -> None:
     if not path_exists(combine_full_path(OUTPUT_DIRECTORY_NAME)):
         os.makedirs(combine_full_path(OUTPUT_DIRECTORY_NAME))
     
-    print("[cyan]Enter output pdf file name:")
+    print("[cyan]Enter output pdf file NAME (not full path):")
     output_file_name_from_user = get_path_from_user(OUTPUT_FILE_SHOULD_EXISTS)
     full_output_merged_pdf_path = combine_full_path(output_file_name_from_user, OUTPUT_DIRECTORY_NAME)
     
