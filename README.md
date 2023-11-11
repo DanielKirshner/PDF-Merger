@@ -1,4 +1,4 @@
-# PDF-Splitter-Merger
+# PDF-Merger
 
 - Merge multiple PDF files into one PDF file !
 - Compatible for Windows, Linux and macOS !
